@@ -1,5 +1,5 @@
 ﻿LinkedList.LinkedList list = new LinkedList.LinkedList();
-Console.WriteLine("\nLinkedList Operations:\n0.Exit\n1.Add\n2.Display\n3.Append\n4.Insert at position\n5.Delete\nEnter your choice:");
+Console.WriteLine("\nLinkedList Operations:\n0.Exit\n1.Add\n2.Display\n3.Append\n4.Insert at position\n5.Delete First Node\n6.Delete Last Node\nEnter your choice:");
 int choice = Convert.ToInt32(Console.ReadLine());
 while (choice != 0 )
 {
@@ -32,12 +32,15 @@ while (choice != 0 )
             list.InsertAtPosition(pos, ele);
             break;
         case 5:
-            list.Delete();
+            list.DeleteFirst();
+            break;
+        case 6:
+            list.DeleteLast();
             break;
         default:
             Console.WriteLine("Invalid option.");
             break;
     }
-    Console.WriteLine("\nLinkedList Operations:\n0.Exit\n1.Add\n2.Display\n3.Append\n4.Insert at position\n5.Delete\nEnter your choice:");
+    Console.WriteLine("\nLinkedList Operations:\n0.Exit\n1.Add\n2.Display\n3.Append\n4.Insert at position\n5.Delete First Node\n6.Delete Last node\nEnter your choice:");
     choice = Convert.ToInt32(Console.ReadLine());
 }
