@@ -74,5 +74,15 @@ namespace LinkedList
                 temp.next = newNode;
             }
         }
+        public void Delete()
+        {
+            if (this.head == null)
+                Console.WriteLine("Linked List is Empty.");
+            else
+            {
+                Console.WriteLine(this.head + " is removed from Linked List.");
+                this.head = this.head.next;
+            }
+        }
     }
 }
